@@ -45,4 +45,11 @@ const team = [
 // 2. Stampare le stesse informazioni su DOM sottoforma di stringhe
 
 
-6
+// 1. Stampare su console le informazioni di nome, ruolo e la stringa della foto
+for (let i = 0; i < team.length; i++) {
+    const member = team[i];
+    console.log(member.name);
+    console.log(member.role);
+    console.log(member.image);
+
+}
