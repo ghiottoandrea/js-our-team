@@ -1,12 +1,3 @@
-/*
-
-BONUS 1:
-trasformare la stringa foto in una immagine effettiva
-BONUS 2:
-organizzare i singoli membri in card/schede
-
-*/
-
 const team = [
     {
         name: 'Wayne Barnett',
@@ -56,15 +47,22 @@ for (let i = 0; i < team.length; i++) {
 
 // 2. Stampare le stesse informazioni su DOM sottoforma di stringhe
 //Prendo l'elemento dalla DOM
-const containerEl = document.querySelector(`.container`)
-console.log(containerEl);
+const rowEl = document.querySelector(`.row`)
+console.log(rowEl);
 
 //Usando il ciclo FOR stampo sulla DOM con INNER
 for (let i = 0; i < team.length; i++) {
     const member = team[i];
-    
-    //Creo un markup
-    const markup = `<h3>${member.name}</h3><p>${member.role}</p><img src="./assets/img/${member.image}" alt="">`
 
-    containerEl.innerHTML += markup
+    //Creo un markup
+    const markup = 
+    `<div class="col-4">
+            <div class="card p-3 mt-3">
+                <h3>${member.name}</h3>
+                <p>${member.role}</p>
+                <img src="./assets/img/${member.image}" alt="">
+            </div>
+    </div>`
+
+    rowEl.innerHTML += markup
 }
